@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import * as Location from 'expo-location';
 import DateTime from './components/DateTime'
 import WeatherScroll from './components/WeatherScroll'
+import { Footer } from './components/Footer';
 
 const API_KEY ='49cc8c821cd2aff9af04c9f98c36eb74';
 const img = require('./assets/background2.jpg')
@@ -39,6 +40,7 @@ export default function App() {
       <ImageBackground source={img} style={styles.image} >
         <DateTime current={data.current} timezone={data.timezone} lat={data.lat} lon={data.lon}/>
         <WeatherScroll weatherData={data.daily}/>
+        <Footer/>
       </ImageBackground>
     </View>
   );
