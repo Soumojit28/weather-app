@@ -46,7 +46,7 @@ const DateTime = ({current, lat, lon, timezone}) => {
                    <Text style={styles.subheading}>{date}</Text>
                </View>
                <View style={styles.weatherItemContainer}>
-                    <WeatherItem title="Humidity" value={current? current.humidity : ""} unit="%"/>
+                    <WeatherItem title="Humidity %" value={current? current.humidity : ""} unit="%"/>
                     <WeatherItem title="Pressure" value={current? current.pressure : ""} unit="hPA"/>
                     <WeatherItem title="Sunrise" value={current? moment.tz(current.sunrise * 1000, timezone ).format('HH:mm'): ""} unit="am"/>
                     <WeatherItem title="Sunset" value={current? moment.tz(current.sunset * 1000, timezone ).format('HH:mm') : ""} unit="pm"/>
